@@ -1,6 +1,4 @@
-import React from "react";
-
-const LandingPage = () => {
+const LandingPage = ({ onStart }) => {
   return (
     <div style={{
       backgroundColor: "#FAFAF8",
@@ -15,21 +13,22 @@ const LandingPage = () => {
       <p style={{ fontSize: "1.25rem", color: "#737373", maxWidth: "600px", margin: "0 auto" }}>
         Prezen is your AI-powered agent that transforms thoughts into beautifully designed presentations.
       </p>
-
       <div style={{ marginTop: "2rem" }}>
-        <button style={{
-          backgroundColor: "#3E7BFA",
-          color: "#fff",
-          border: "none",
-          padding: "1rem 2rem",
-          fontSize: "1rem",
-          borderRadius: "8px",
-          cursor: "pointer",
-          marginRight: "1rem"
-        }}>
+        <button
+          onClick={onStart}
+          style={{
+            backgroundColor: "#3E7BFA",
+            color: "#fff",
+            border: "none",
+            padding: "1rem 2rem",
+            fontSize: "1rem",
+            borderRadius: "8px",
+            cursor: "pointer",
+            marginRight: "1rem"
+          }}
+        >
           Start Creating
         </button>
-
         <button style={{
           backgroundColor: "transparent",
           border: "2px solid #3E7BFA",
